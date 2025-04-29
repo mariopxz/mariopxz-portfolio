@@ -2,6 +2,7 @@ import Header from "@/components/Header"
 import Divider from "@/components/Divider";
 import Info from "@/components/Info";
 import Navbar from "../layout/Navbar";
+import Social from "@/components/Social";
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
         <Divider />
         <Info />
         <Divider />
-        
+        <Social />
+        <Divider />
       </div>
     </div>
   );

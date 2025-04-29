@@ -1,5 +1,6 @@
 import Header from "@/components/Header"
 import Divider from "@/components/Divider";
+import Info from "@/components/Info";
 import Navbar from "../layout/Navbar";
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
         <Navbar />
         <Header />
         <Divider />
+        <Info />
+        <Divider />
+        
       </div>
     </div>
   );

@@ -42,13 +42,15 @@ const Social = () => {
 
       {/* Social Links */}
       <div className="grid grid-cols-1 gap-4 pt-2 sm:grid-cols-2">
-        {socialLinks.map(({ name, username, href, img }) => (
+        {socialLinks.map(({ name, username, href, img }, index) => (
           <a
             key={name}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex cursor-pointer items-center gap-4 p-4 transition-colors select-none"
+            className={`group flex cursor-pointer items-center gap-4 p-4 transition-colors select-none ${
+              index === 0 || index === 1 ? "screen-line-after" : ""
+            } ${index === 2 || index === 3 ? "screen-line-before" : ""}`}
           >
             <div className="relative size-12 shrink-0">
               <img
@@ -62,7 +64,9 @@ const Social = () => {
               <p className="flex items-center font-heading font-medium decoration-ring underline-offset-4 group-hover:underline">
                 {name}
               </p>
-              <p className="font-mono text-sm text-muted-foreground">{username}</p>
+              <p className="font-mono text-sm text-muted-foreground">
+                {username}
+              </p>
             </div>
             <ExternalLink className="size-4 text-muted-foreground" />
           </a>

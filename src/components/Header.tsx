@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <div>
       {/* MIDDLE PATTERN BLOCK */}
-      <div className="relative aspect-[2/1] md:aspect-[3/1] border-x border-grid bg-white/75 dark:bg-zinc-950/75 bg-[radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:10px_10px] bg-center">
+      <div className="aspect-[2/1] border-x border-grid select-none md:aspect-[3/1] screen-line-after before:-top-px after:-bottom-px bg-zinc-950/0.75 bg-[image:radial-gradient(var(--pattern-foreground)_1px,_transparent_0)] bg-[size:10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5">
         <div className="flex size-full justify-center items-center text-white dark:text-black">
           {/* Logo visible en modo claro */}
           <img
@@ -69,7 +69,7 @@ const Header = () => {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="screen-line-after flex border-x border-grid">
+      <div className="flex border-x border-grid">
         {/* Avatar */}
         <div className="relative shrink-0 border-r border-grid p-1">
           <img

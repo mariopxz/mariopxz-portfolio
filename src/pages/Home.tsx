@@ -3,6 +3,7 @@ import Divider from "@/components/Divider";
 import Info from "@/components/Info";
 import Navbar from "../layout/Navbar";
 import Social from "@/components/Social";
+import About from "@/components/About";
 
 const Home = () => {
   return (
@@ -14,6 +15,8 @@ const Home = () => {
         <Info />
         <Divider />
         <Social />
+        <Divider />
+        <About />
         <Divider />
       </div>
     </div>

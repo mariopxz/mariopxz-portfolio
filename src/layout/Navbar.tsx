@@ -7,7 +7,7 @@ const Navbar = () => {
 
 
   return (
-      <header className="flex h-12 items-center justify-end gap-4 p-2 border-y-1 border-accent">
+      <header className="flex h-12 items-center justify-end gap-4 p-2 screen-line-before screen-line-after">
         <nav className="flex items-center gap-3 max-sm:hidden">
           <a
             href="#about"

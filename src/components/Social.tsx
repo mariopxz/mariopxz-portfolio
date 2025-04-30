@@ -41,7 +41,7 @@ const Social = () => {
       </div>
 
       {/* Social Links */}
-      <div className="grid grid-cols-1 gap-4 pt-2 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {socialLinks.map(({ name, username, href, img }, index) => (
           <a
             key={name}

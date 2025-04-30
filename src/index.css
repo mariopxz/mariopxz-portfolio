@@ -250,3 +250,33 @@ body {
 @utility screen-line-after {
   @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-grid;
 }
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltip-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.tooltip-content[data-state="delayed-open"] {
+  animation: tooltip-fade-in 0.2s ease-out forwards;
+}
+
+.tooltip-content[data-state="closed"] {
+  animation: tooltip-fade-out 0.2s ease-in forwards;
+}

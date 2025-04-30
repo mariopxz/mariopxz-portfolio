@@ -4,6 +4,8 @@ import Info from "@/components/Info";
 import Navbar from "../layout/Navbar";
 import Social from "@/components/Social";
 import About from "@/components/About";
+import Stack from "@/components/Stack";
+import SpotifyPlaylist from "@/components/SpotifyPlaylist";
 
 const Home = () => {
   return (
@@ -17,6 +19,10 @@ const Home = () => {
         <Social />
         <Divider />
         <About />
+        <Divider />
+        <Stack />
+        <Divider />
+        <SpotifyPlaylist />
         <Divider />
       </div>
     </div>

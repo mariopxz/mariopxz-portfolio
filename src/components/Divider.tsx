@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Divider = () => {
   return (
       <div className="max-w-3xl min-h-8">

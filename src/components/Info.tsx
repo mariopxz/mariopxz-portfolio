@@ -13,7 +13,7 @@ const Info = () => {
         <span className="text-muted-foreground flex size-6 p-1 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900">
           <Lightbulb />
         </span>
-        <p className="text-balance">Founder @Trekki</p>
+        <p className="text-balance">Founder of Revup</p>
       </div>
       <div className="flex items-center gap-4 font-mono text-sm">
         <span className="text-muted-foreground flex size-6 p-1 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900">

@@ -4,13 +4,12 @@ import Info from "@/components/Info";
 import Navbar from "../layout/Navbar";
 import Social from "@/components/Social";
 import About from "@/components/About";
-import Stack from "@/components/Stack";
-import SpotifyPlaylist from "@/components/SpotifyPlaylist";
+import Experience from "@/components/Experience";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen bg-background flex justify-center mt-2">
-      <div className="border-l-1 border-r-1 border-accent w-3xl z-10">
+    <div className="min-h-screen w-screen bg-background flex justify-center mt-2">
+      <div className="border-l-1 border-r-1 min-h-screen border-accent w-3xl z-10">
         <Navbar />
         <Header />
         <Divider />
@@ -20,9 +19,7 @@ const Home = () => {
         <Divider />
         <About />
         <Divider />
-        <Stack />
-        <Divider />
-        <SpotifyPlaylist />
+        <Experience />
         <Divider />
       </div>
     </div>

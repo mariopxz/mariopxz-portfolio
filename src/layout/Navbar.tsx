@@ -16,12 +16,6 @@ const Navbar = () => {
             About
           </a>
           <a
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
-            href="/blog"
-          >
-            Blog
-          </a>
-          <a
             href="#experience"
             className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
           >
@@ -32,18 +26,6 @@ const Navbar = () => {
             className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
           >
             Projects
-          </a>
-          <a
-            href="#awards"
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
-          >
-            Awards
-          </a>
-          <a
-            href="#certs"
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
-          >
-            Certs
           </a>
         </nav>
 
@@ -63,7 +45,7 @@ const Navbar = () => {
           <button
             onClick={() => toggleDark()}
             data-slot="button"
-            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-[color,background-color] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8"
+            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-[color,background-color] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8 hover:cursor-pointer"
           >
             {isDark ? (
               <Sun className="size-4 text-sm" />

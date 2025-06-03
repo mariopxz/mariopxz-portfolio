@@ -18,6 +18,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     };
 
     setIsDark(matchDark.matches);
+    if (matchDark.matches) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
     matchDark.addEventListener("change", handleChange);
 
     return () => matchDark.removeEventListener("change", handleChange);

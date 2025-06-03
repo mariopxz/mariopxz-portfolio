@@ -75,7 +75,7 @@ const Header = () => {
           <img
             src={MarioAvatar}
             alt="mariopxz avatar"
-            className="size-32 sm:size-40 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background"
+            className="w-32 sm:w-40 h-32 sm:h-40 object-cover object-right rounded-full ring-1 ring-border ring-offset-2 ring-offset-background"
           />
           <svg
             className="absolute top-0 -left-px h-8 sm:h-9"

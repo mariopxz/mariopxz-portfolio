@@ -25,6 +25,7 @@ const Experience = () => {
 
         return (
           <div
+            id="experience"
             key={index}
             className="flex flex-col py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6 relative screen-line-after"
           >

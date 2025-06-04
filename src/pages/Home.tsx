@@ -5,6 +5,7 @@ import Navbar from "../layout/Navbar";
 import Social from "@/components/Social";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 const Home = () => {
   return (
@@ -20,6 +21,8 @@ const Home = () => {
         <About />
         <Divider />
         <Experience />
+        <Divider />
+        <Projects />
         <Divider />
       </div>
     </div>

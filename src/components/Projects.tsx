@@ -46,7 +46,7 @@ const Projects = () => {
                     className="hover:cursor-pointer"
                   >
                     { project.link ? (
-                      <ExternalLink className="size-4 text-muted-foreground hover:text-white transition-all duration-300 ease-in-out" />
+                      <ExternalLink className="size-4 text-muted-foreground hover:text-foreground transition-all duration-300 ease-in-out" />
                     ) : (
                       <span className="text-muted-foreground">Soon</span>
                     )}
@@ -57,7 +57,7 @@ const Projects = () => {
                     className="hover:cursor-pointer"
                   >
                     { project.github ? (
-                      <Github className="size-4 text-muted-foreground hover:text-white transition-all duration-300 ease-in-out" />
+                      <Github className="size-4 text-muted-foreground hover:text-foreground transition-all duration-300 ease-in-out" />
                     ) : (
                       <span className="text-muted-foreground">Soon</span>
                     )}

@@ -10,7 +10,7 @@ const Experience = () => {
   );
 
   return (
-    <section className="flex flex-col px-4">
+    <section id="experience" className="flex flex-col px-4">
       <div className="screen-line-after">
         <h2 className="text-3xl font-medium flex items-center">Experiencia</h2>
       </div>
@@ -25,7 +25,6 @@ const Experience = () => {
 
         return (
           <div
-            id="experience"
             key={index}
             className="flex flex-col py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6 relative screen-line-after"
           >
@@ -39,12 +38,12 @@ const Experience = () => {
               </span>
               <div>
                 <div className="flex items-center gap-2">
-                  <h4 className="text-md font-medium hover:underline hover:text-blue-500 hover:cursor-pointer">{job.title}</h4>
+                  <h4 className="text-md font-medium hover:cursor-pointer hover:underline decoration-blue-500 underline-offset-4">{job.title}</h4>
                   {job.actuallyWorking && (
                     <span className="ml-2 mt-1 size-2 rounded-full bg-green-500 relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-green-500 before:opacity-75 before:animate-ping"></span>
                   )}
                   <button
-                    className="text-sm text-white hover:underline absolute right-0"
+                    className="text-sm hover:underline absolute right-0"
                   >
                     <ChevronDown
                       className={`transition-transform duration-300 ${
@@ -122,12 +121,12 @@ const Experience = () => {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-md font-medium hover:underline hover:text-blue-500 hover:cursor-pointer">{education.title}</h4>
+                    <h4 className="text-md font-medium hover:cursor-pointer hover:underline decoration-blue-500 underline-offset-4">{education.title}</h4>
                     {education.actuallyStudying && (
                       <span className="ml-2 mt-1 size-2 rounded-full bg-green-500 relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-green-500 before:opacity-75 before:animate-ping"></span>
                     )}
                     <button
-                      className="text-sm text-white hover:underline absolute right-0"
+                      className="text-sm hover:underline absolute right-0"
                     >
                       <ChevronDown
                         className={`transition-transform duration-300 ${

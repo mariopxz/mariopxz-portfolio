@@ -1,12 +1,15 @@
 import { Github, Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
+import { useState } from "react";
 
 
 const Navbar = () => {
   const { isDark, toggleDark } = useTheme();
-
+  const [mobileOpen, setMobileOpen] = useState(false);
+  
 
   return (
+    <div className="relative">
       <header className="flex h-12 items-center justify-end gap-4 p-2 screen-line-before screen-line-after">
         <nav className="flex items-center gap-3 max-sm:hidden">
           <a
@@ -55,12 +58,33 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Menu Icon */}
-          <button className="sm:hidden flex flex-col items-center justify-center rounded-full size-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground group">
-            <span className="h-0.5 w-4 rounded bg-foreground transition-transform group-data-[state=open]:translate-y-[3px] group-data-[state=open]:rotate-45" />
-            <span className="h-0.5 w-4 rounded bg-foreground transition-transform group-data-[state=open]:-translate-y-[3px] group-data-[state=open]:-rotate-45" />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="sm:hidden relative flex flex-col items-center justify-center rounded-full size-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground group"
+          >
+            <span
+              className={`absolute h-0.5 w-4 rounded bg-foreground transition-all duration-300 ${
+                mobileOpen ? 'rotate-45' : '-translate-y-1'
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-4 rounded bg-foreground transition-all duration-300 ${
+                mobileOpen ? '-rotate-45' : 'translate-y-1'
+              }`}
+            />
           </button>
         </div>
       </header>
+      <nav
+  className={`sm:hidden absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${
+    mobileOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+  }`}
+>
+  <a href="#about" className="font-mono text-sm font-medium text-muted-foreground">About</a>
+  <a href="#experience" className="font-mono text-sm font-medium text-muted-foreground">Experience</a>
+  <a href="#projects" className="font-mono text-sm font-medium text-muted-foreground">Projects</a>
+</nav>
+    </div>
   );
 };
 

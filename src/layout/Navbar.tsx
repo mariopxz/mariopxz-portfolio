@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,13 +22,13 @@ const Navbar = () => {
   return (
     <div className="relative sticky top-0 z-50">
       <header
-        className={`flex h-12 items-center gap-4 p-2 transition-colors duration-300 ${
+        className={`flex h-12 items-center justify-end gap-4 p-2 transition-colors duration-300 ${
           scrolled
-          ? "bg-background/80 backdrop-blur border-b border-border justify-between"
-          : "justify-end"
+          ? "bg-background/80 backdrop-blur border-b border-border"
+          : ""
         }`}
       >
-        <img src={isDark ? logoWhite : logoBlack} alt="Mario Pérez Logo" className={`${scrolled ? "flex" : "hidden"} w-16 h-16`} />
+        <img src={isDark ? logoWhite : logoBlack} alt="Mario Pérez Logo" className={`${scrolled ? "flex" : "hidden"} w-16 h-16 absolute left-0`} />
         <nav className="flex items-center gap-3 max-sm:hidden">
           <a
             href="#about"
@@ -48,7 +48,9 @@ const Navbar = () => {
           >
             Projects
           </a>
-          <div className="flex items-center gap-2">
+        </nav>
+
+        <div className="flex items-center gap-2">
           {/* GitHub Button */}
           <a
             href="https://github.com/mariopxz"
@@ -90,9 +92,6 @@ const Navbar = () => {
             />
           </button>
         </div>
-        </nav>
-
-        
       </header>
       <nav
         className={`sm:hidden absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${

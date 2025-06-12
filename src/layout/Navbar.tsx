@@ -102,18 +102,21 @@ const Navbar = () => {
       >
         <a
           href="#about"
+          onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
           About
         </a>
         <a
           href="#experience"
+          onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
           Experience
         </a>
         <a
           href="#projects"
+          onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
           Projects

@@ -207,7 +207,8 @@
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
-    scrollbar-color: var(--d-border) transparent;
+  scrollbar-color: var(--d-border) transparent;
+  scroll-behavior: smooth;
 }
 
 body {

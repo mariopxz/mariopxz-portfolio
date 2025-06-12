@@ -1,16 +1,34 @@
 import { Github, Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import logoBlack from "../assets/images/mariopxz-logo-black.webp"
+import logoWhite from "../assets/images/mariopxz-logo-white.webp"
 
 const Navbar = () => {
   const { isDark, toggleDark } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
-  
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="relative">
-      <header className="flex h-12 items-center justify-end gap-4 p-2 screen-line-before screen-line-after">
+    <div className="relative sticky top-0 z-50">
+      <header
+        className={`flex h-12 items-center gap-4 p-2 transition-colors duration-300 ${
+          scrolled
+          ? "bg-background/80 backdrop-blur border-b border-border justify-between"
+          : "justify-end"
+        }`}
+      >
+        <img src={isDark ? logoWhite : logoBlack} alt="Mario Pérez Logo" className={`${scrolled ? "flex" : "hidden"} w-16 h-16`} />
         <nav className="flex items-center gap-3 max-sm:hidden">
           <a
             href="#about"
@@ -30,9 +48,7 @@ const Navbar = () => {
           >
             Projects
           </a>
-        </nav>
-
-        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
           {/* GitHub Button */}
           <a
             href="https://github.com/mariopxz"
@@ -64,26 +80,46 @@ const Navbar = () => {
           >
             <span
               className={`absolute h-0.5 w-4 rounded bg-foreground transition-all duration-300 ${
-                mobileOpen ? 'rotate-45' : '-translate-y-1'
+                mobileOpen ? "rotate-45" : "-translate-y-1"
               }`}
             />
             <span
               className={`absolute h-0.5 w-4 rounded bg-foreground transition-all duration-300 ${
-                mobileOpen ? '-rotate-45' : 'translate-y-1'
+                mobileOpen ? "-rotate-45" : "translate-y-1"
               }`}
             />
           </button>
         </div>
+        </nav>
+
+        
       </header>
       <nav
-  className={`sm:hidden absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${
-    mobileOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
-  }`}
->
-  <a href="#about" className="font-mono text-sm font-medium text-muted-foreground">About</a>
-  <a href="#experience" className="font-mono text-sm font-medium text-muted-foreground">Experience</a>
-  <a href="#projects" className="font-mono text-sm font-medium text-muted-foreground">Projects</a>
-</nav>
+        className={`sm:hidden absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${
+          mobileOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        <a
+          href="#about"
+          className="font-mono text-sm font-medium text-muted-foreground"
+        >
+          About
+        </a>
+        <a
+          href="#experience"
+          className="font-mono text-sm font-medium text-muted-foreground"
+        >
+          Experience
+        </a>
+        <a
+          href="#projects"
+          className="font-mono text-sm font-medium text-muted-foreground"
+        >
+          Projects
+        </a>
+      </nav>
     </div>
   );
 };

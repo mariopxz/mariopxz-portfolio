@@ -77,20 +77,6 @@ const Header = () => {
             alt="mariopxz avatar"
             className="w-32 sm:w-40 h-32 sm:h-40 object-cover object-right rounded-full ring-1 ring-border ring-offset-2 ring-offset-background"
           />
-          <svg
-            className="absolute top-0 -left-px h-8 sm:h-9"
-            viewBox="0 0 60 40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Fondo amarillo */}
-            <rect width="60" height="40" fill="#FFC400" />
-
-            {/* Franja roja superior */}
-            <rect width="60" height="10" y="0" fill="#cf151c" />
-
-            {/* Franja roja inferior */}
-            <rect width="60" height="10" y="30" fill="#cf151c" />
-          </svg>
         </div>
 
         {/* Name + Subtitle */}

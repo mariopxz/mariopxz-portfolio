@@ -25,7 +25,7 @@ const Info = () => {
         <span className="text-muted-foreground flex size-6 p-1 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900">
           <Mail />
         </span>
-        <a className="text-balance" href="mailto:emariors@gmail.com">emariors@gmail.com</a>
+        <a className="text-balance" href="mailto:ml.delarosa@outlook.es">ml.delarosa@outlook.es</a>
       </div>
       <div className="flex items-center gap-4 font-mono text-sm">
         <span className="text-muted-foreground flex size-6 p-1 shrink-0 items-center justify-center rounded-lg border bg-zinc-50 shadow-xs dark:bg-zinc-900">

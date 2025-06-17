@@ -8,7 +8,7 @@ const About = () => {
       </div>
       <div className="flex flex-col py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6">
         <p>
-          Hola, Mundo! Soy Mario López, Frontend Developer aprendiendo backend para completar mis habilidades a Fullstack Developer,
+          Hola, Mundo! Soy Mario López, Frontend Developer aprendiendo backend para complementar mis habilidades y convertirme en un perfil Full Stack,
           apasionado por crear soluciones de software de alto rendimiento,
           centradas en el usuario con diseños intuitivos y atractivos.
         </p>

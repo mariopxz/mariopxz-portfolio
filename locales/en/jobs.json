@@ -1,0 +1,29 @@
+{
+  "jobs": [
+    {
+      "logo": "/images/faviconMira.svg",
+      "company": "Mira Telecomunicaciones",
+      "icon": "Code",
+      "title": "Junior Fullstack Developer",
+      "actuallyWorking": true,
+      "description": [
+        "Dual-contract internship, developing and maintaining tools and new features for the company's website using HTML, CSS, JavaScript, and PHP, as well as internal projects to automate company processes using technologies such as React, Express, Tailwind CSS, and MySQL."
+      ],
+      "modality": "Part Time",
+      "startDate": "01.2022",
+      "endDate": "Present",
+      "technologies": [
+        "JavaScript",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "PHP",
+        "Tailwind CSS",
+        "Git",
+        "Figma"
+      ]
+    }
+  ]
+}

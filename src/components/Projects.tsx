@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { ChevronDown, Github, ExternalLink } from "lucide-react";
-import { projectsInfo } from "../lib/projectsInfo";
+import { useProjectsInfo } from "../lib/projectsInfo";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projectsInfo = useProjectsInfo();
   const projectsCount = projectsInfo.length;
   const [projectOpenStates, setProjectOpenStates] = useState(
     projectsInfo.map(() => false)
@@ -11,7 +15,7 @@ const Projects = () => {
   return (
     <section id="projects" className="flex flex-col px-4">
       <div className="flex gap-2 screen-line-after">
-        <h2 className="text-3xl font-medium flex items-center">Projects</h2>
+        <h2 className="text-3xl font-medium flex items-center">{t("projects")}</h2>
         <span className="text-muted-foreground text-xl font-medium">
           ({projectsCount})
         </span>
@@ -26,14 +30,13 @@ const Projects = () => {
         };
 
         return (
-          <div className="flex py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6">
+          <div key={project.title} className="flex py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6">
             <>
               <img src={project.logo.light} alt={project.title} className="w-6 h-6 block dark:hidden" />
               <img src={project.logo.dark} alt={project.title} className="w-6 h-6 hidden dark:block" />
             </>
             <div
               onClick={toggleOpen}
-              key={index}
               className="flex flex-col gap-2"
             >
               
@@ -48,7 +51,7 @@ const Projects = () => {
                     { project.link ? (
                       <ExternalLink className="size-4 text-muted-foreground hover:text-foreground transition-all duration-300 ease-in-out" />
                     ) : (
-                      <span className="text-muted-foreground">Soon</span>
+                      <span className="text-muted-foreground">{t("soon")}</span>
                     )}
                   </a>
                   <a
@@ -59,7 +62,7 @@ const Projects = () => {
                     { project.github ? (
                       <Github className="size-4 text-muted-foreground hover:text-foreground transition-all duration-300 ease-in-out" />
                     ) : (
-                      <span className="text-muted-foreground">Soon</span>
+                      <span className="text-muted-foreground">{t("soon")}</span>
                     )}
                   </a>
                 </div>
@@ -83,7 +86,7 @@ const Projects = () => {
               >
                 <p className="text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-1.5 pt-2">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies.map((tech: string, techIndex: number) => (
                     <span
                       key={techIndex}
                       className="inline-flex items-center rounded-lg border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900"

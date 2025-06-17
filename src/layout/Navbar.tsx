@@ -1,10 +1,16 @@
-import { Github, Moon, Sun } from "lucide-react";
+import { Github, Moon, Sun, Languages } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import { useEffect, useState } from "react";
 import logoBlack from "../assets/images/mariopxz-logo-black.webp"
 import logoWhite from "../assets/images/mariopxz-logo-white.webp"
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+
   const { isDark, toggleDark } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -32,21 +38,21 @@ const Navbar = () => {
         <nav className="flex items-center gap-3 max-sm:hidden">
           <a
             href="#about"
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
+            className="font-mono text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300"
           >
-            About
+            {t("about")}
           </a>
           <a
             href="#experience"
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
+            className="font-mono text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300"
           >
-            Experience
+            {t("experience")}
           </a>
           <a
             href="#projects"
-            className="font-mono text-sm font-medium text-muted-foreground transition-all duration-300"
+            className="font-mono text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300"
           >
-            Projects
+            {t("projects")}
           </a>
         </nav>
 
@@ -75,9 +81,24 @@ const Navbar = () => {
             )}
           </button>
 
+          {/* Language Toggle Button */}
+          <button
+            onClick={() => {
+              setLanguageMenuOpen(!languageMenuOpen)
+              setMobileOpen(false)
+            }}
+            data-slot="button"
+            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-[color,background-color] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8 hover:cursor-pointer"
+          >
+            <Languages />
+          </button>
+
           {/* Mobile Menu Icon */}
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => {
+              setMobileOpen(!mobileOpen)
+              setLanguageMenuOpen(false)
+            }}
             className="sm:hidden relative flex flex-col items-center justify-center rounded-full size-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground group"
           >
             <span
@@ -94,6 +115,32 @@ const Navbar = () => {
         </div>
       </header>
       <nav
+        className={`absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${
+          languageMenuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        <button
+          onClick={() => {
+            i18n.changeLanguage('es')
+            setLanguageMenuOpen(false)
+          }}
+          className="font-mono text-sm font-medium text-muted-foreground hover:cursor-pointer hover:text-foreground transition-all duration-300"
+        >
+          {t("spanish")}
+        </button>
+        <button
+          onClick={() => {
+            i18n.changeLanguage('en')
+            setLanguageMenuOpen(false)
+          }}
+          className="font-mono text-sm font-medium text-muted-foreground hover:cursor-pointer hover:text-foreground transition-all duration-300"
+        >
+          {t("english")}
+        </button>
+      </nav>
+      <nav
         className={`sm:hidden absolute top-full right-2 mt-2 flex flex-col items-start gap-2 border border-input bg-background p-4 shadow-md z-50 rounded-lg transition-all duration-300 ease-out ${
           mobileOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -105,21 +152,21 @@ const Navbar = () => {
           onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
-          About
+          {t("about")}
         </a>
         <a
           href="#experience"
           onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
-          Experience
+          {t("experience")}
         </a>
         <a
           href="#projects"
           onClick={() => setMobileOpen(false)}
           className="font-mono text-sm font-medium text-muted-foreground"
         >
-          Projects
+          {t("projects")}
         </a>
       </nav>
     </div>

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Code, GraduationCap, ChevronDown } from "lucide-react";
-import { jobInfo } from "../lib/jobInfo";
-import { educationInfo } from "../lib/educationInfo";
+import { useJobInfo } from "../lib/jobInfo";
+import { useEducationInfo } from "../lib/educationInfo";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
+  const { t } = useTranslation();
+  const educationInfo = useEducationInfo();
+  const jobInfo = useJobInfo();
   const [jobOpenStates, setJobOpenStates] = useState(jobInfo.map(() => false));
   const [educationOpenStates, setEducationOpenStates] = useState(
     educationInfo.map(() => false)
@@ -12,7 +16,7 @@ const Experience = () => {
   return (
     <section id="experience" className="flex flex-col px-4">
       <div className="screen-line-after">
-        <h2 className="text-3xl font-medium flex items-center">Experiencia</h2>
+        <h2 className="text-3xl font-medium flex items-center">{t("experience")}</h2>
       </div>
 
       {jobInfo.map((job, index) => {
@@ -25,7 +29,7 @@ const Experience = () => {
 
         return (
           <div
-            key={index}
+            key={job.company}
             className="flex flex-col py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6 relative screen-line-after"
           >
             <div className="flex items-center gap-4">
@@ -42,7 +46,7 @@ const Experience = () => {
                   {job.actuallyWorking && (
                     <span className="ml-2 mt-1 size-2 rounded-full bg-green-500 relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-green-500 before:opacity-75 before:animate-ping"></span>
                   )}
-                  <button
+                  <span
                     className="text-sm hover:underline absolute right-0"
                   >
                     <ChevronDown
@@ -50,7 +54,7 @@ const Experience = () => {
                         isOpen ? "rotate-180" : "rotate-0"
                       }`}
                     />
-                  </button>
+                  </span>
                 </div>
                 <p className="text-sm text-gray-500">
                   {job.modality} | {job.startDate} - {job.endDate}
@@ -64,13 +68,13 @@ const Experience = () => {
                     <p className="mt-2">{job.description[0]}</p>
                   ) : (
                     <ul className="list-disc pl-5 mt-2 marker:text-muted-foreground">
-                      {job.description.map((desc, descIndex) => (
+                      {job.description.map((desc: string, descIndex: number) => (
                         <li key={descIndex}>{desc}</li>
                       ))}
                     </ul>
                   )}
                   <div className="flex flex-wrap gap-1.5 pt-2">
-                    {job.technologies.map((tech, techIndex) => (
+                    {job.technologies.map((tech: string, techIndex: number) => (
                       <span
                         key={techIndex}
                         className="inline-flex items-center rounded-lg border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900"
@@ -92,7 +96,7 @@ const Experience = () => {
           <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
         </span>
         <h3 className="font-heading text-xl leading-snug font-medium">
-          Educación
+          {t("education")}
         </h3>
       </div>
       {educationInfo.map((education, index) => {
@@ -104,7 +108,7 @@ const Experience = () => {
         };
 
         return (
-          <React.Fragment key={index}>
+          <React.Fragment key={education.title}>
             <div className="flex flex-col py-4 font-mono gap-4 text-balance text-foreground text-sm leading-6 relative">
               <button onClick={toggleOpen} className="flex items-start gap-4 appearance-none bg-transparent border-0 p-0 m-0 text-left w-full hover:cursor-pointer">
                 <div className="relative flex flex-col items-center">
@@ -125,7 +129,7 @@ const Experience = () => {
                     {education.actuallyStudying && (
                       <span className="ml-2 mt-1 size-2 rounded-full bg-green-500 relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-green-500 before:opacity-75 before:animate-ping"></span>
                     )}
-                    <button
+                    <span
                       className="text-sm hover:underline absolute right-0"
                     >
                       <ChevronDown
@@ -133,7 +137,7 @@ const Experience = () => {
                           isOpen ? "rotate-180" : "rotate-0"
                         }`}
                       />
-                    </button>
+                    </span>
                   </div>
                   <p className="text-sm text-gray-500">
                     {education.center} | {education.startDate} -{" "}
@@ -145,12 +149,12 @@ const Experience = () => {
                     }`}
                   >
                     <ul className="list-disc pl-5 mt-2 marker:text-muted-foreground">
-                      {education.description.map((desc, descIndex) => (
+                      {education.description.map((desc: string, descIndex: number) => (
                         <li key={descIndex}>{desc}</li>
                       ))}
                     </ul>
                     <div className="flex flex-wrap gap-1.5 pt-2">
-                      {education.technologies.map((tech, techIndex) => (
+                      {education.technologies.map((tech: string, techIndex: number) => (
                         <span
                           key={techIndex}
                           className="inline-flex items-center rounded-lg border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900"

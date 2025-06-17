@@ -1,0 +1,21 @@
+{
+  "about": "Sobre mí",
+  "experience": "Experiencia",
+  "projects": "Proyectos",
+  "softwareDeveloper": "Desarrollador de Software",
+  "uiUxDesigner": "Diseñador de Interfaces de Usuario",
+  "youngEmpreneaur": "Joven Emprendedor",
+  "creatingWithCode": "Creando con código, impulsado por pasión.",
+  "spanish": "Español",
+  "english": "Inglés",
+  "frontendDeveloper": "Desarrollador Frontend",
+  "fullstackInProgress": "Full Stack en progreso",
+  "learningBackend": "Aprendiendo backend",
+  "aboutText": "Hola, Mundo! Soy Mario López, Frontend Developer aprendiendo backend para complementar mis habilidades y convertirme en un perfil Full Stack, apasionado por crear soluciones de software de alto rendimiento, centradas en el usuario con diseños intuitivos y atractivos.",
+  "aboutText2": "Con 1+ años de experiencia, me especializo en construir aplicaciones web de alta calidad usando React, TypeScript, y tecnologías modernas de front-end. Mas allá del trabajo, me gusta explorar nuevas tecnologías y convertir ideas en realidad a través de proyectos personales.",
+  "connectAndCollaborate": "Conectemos y colaboremos!",
+  "education": "Educación",
+  "soon": "Pronto",
+  "builtBy": "Desarrollado con ❤️ por",
+  "codeAvailable": "El código fuente está disponible en"
+}

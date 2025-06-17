@@ -1,0 +1,21 @@
+{
+  "about": "About",
+  "experience": "Experience",
+  "projects": "Projects",
+  "softwareDeveloper": "Software Developer",
+  "uiUxDesigner": "UI/UX Designer",
+  "youngEmpreneaur": "Young Empreneaur",
+  "creatingWithCode": "Creating with code, driven by passion.",
+  "spanish": "Spanish",
+  "english": "English",
+  "frontendDeveloper": "Frontend Developer",
+  "fullstackInProgress": "Full Stack in progress",
+  "learningBackend": "Learning backend",
+  "aboutText": "Hello, World! I'm Mario López, Frontend Developer learning backend to complement my skills and become a Full Stack developer, passionate about creating high-performance software solutions, centered on the user with intuitive and attractive designs.",
+  "aboutText2": "With 1+ years of experience, I specialize in building high-quality web applications using React, TypeScript, and modern front-end technologies. Beyond work, I like to explore new technologies and turn ideas into reality through personal projects.",
+  "connectAndCollaborate": "Let's connect and collaborate!",
+  "education": "Education",
+  "soon": "Soon",
+  "builtBy": "Built by with ❤️",
+  "codeAvailable": "The source code is available on"
+}

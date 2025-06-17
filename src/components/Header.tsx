@@ -4,15 +4,19 @@ import MarioLogoLight from "../assets/images/mariopxz-logo-black.webp";
 import MarioLogoDark from "../assets/images/mariopxz-logo-white.webp";
 import MarioAvatar from "../assets/images/mariopxz-avatar.webp";
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
-const titles = [
-  "Software Developer",
-  "UI/UX Designer",
-  "Young Empreneaur",
-  "Creating with code, driven by passion.",
-];
 
 const Header = () => {
+  const { t } = useTranslation();
+
+  const titles = [
+    t("softwareDeveloper"),
+    t("uiUxDesigner"),
+    t("youngEmpreneaur"),
+    t("creatingWithCode"),
+  ];
+
   const [animateKey, setAnimateKey] = useState(0);
   const { isDark } = useTheme();
   const extendedTitles = [...titles, titles[0]]; // para cerrar el bucle visual

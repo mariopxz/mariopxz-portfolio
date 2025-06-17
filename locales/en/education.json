@@ -1,0 +1,31 @@
+{
+  "education": [
+    {
+      "center": "Institut Estatut",
+      "title": "Web Development",
+      "actuallyStudying": false,
+      "description": ["Web development with modern technologies.", "Focus on creating intuitive and functional user interfaces.", "Learning about databases and server management."],
+      "startDate": "09.2023",
+      "endDate": "05.2025",
+      "technologies": ["JavaScript", "PHP", "MySQL", "Node.js", "Figma", "Git", "HTML", "CSS"]
+    },
+    {
+      "center": "Institut Terrassa",
+      "title": "Electronic Maintenance",
+      "actuallyStudying": false,
+      "description": ["Electronic maintenance and automation training.", "Knowledge of PLC programming and embedded systems.", "Practical experience in industrial environments."],
+      "startDate": "09.2021",
+      "endDate": "05.2023",
+      "technologies": ["MicroPython", "Self-learning", "Teamwork"]
+    },
+    {
+      "center": "Institut Terrassa",
+      "title": "Telecommunications Technician",
+      "actuallyStudying": false,
+      "description": ["Telecommunications training.", "Knowledge of PLC programming and embedded systems.", "Practical experience in industrial environments."],
+      "startDate": "09.2018",
+      "endDate": "05.2020",
+      "technologies": ["MicroPython", "Self-learning", "Teamwork"]
+    }
+  ]
+}

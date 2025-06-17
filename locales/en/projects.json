@@ -1,0 +1,47 @@
+{
+  "projects": [
+    {
+      "logo": {
+        "light": "/images/passy.svg",
+        "dark": "/images/passy-w.svg"
+      },
+      "title": "Passy",
+      "startDate": "04.2025",
+      "endDate": "Currently",
+      "description":
+        "Passy is a modern web application for generating secure and personalized passwords. It offers multiple templates, advanced controls such as length and character types, and a visual security evaluation system. It's intuitive, aesthetically pleasing, and designed to improve the user experience by easily creating strong passwords.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI",
+        "Vite",
+        "Lucide Icons"
+      ],
+      "link": "https://passy-one.vercel.app/",
+      "github": "https://github.com/mariopxz/passy"
+    },
+    {
+      "logo": {
+        "light": "/images/ichiraku_logo.webp",
+        "dark": "/images/ichiraku_logo.webp"
+      },
+      "title": "Ichiraku",
+      "startDate": "03.2025",
+      "endDate": "05.2025",
+      "description":
+        "Ichiraku is an anime management platform that allows users to register, follow, and share their favorite anime. With an intuitive interface and attractive design, Ichiraku is an ideal tool for those looking for a quick and easy way to manage their anime lists.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "API REST"
+      ],
+      "link": "",
+      "github": "https://github.com/GuilleMurt/Ichiraku-Project-2"
+    }
+  ]
+}

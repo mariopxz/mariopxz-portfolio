@@ -84,7 +84,7 @@ export function Hero() {
               *
             </motion.span>
           </span>{" "}
-          <span className="text-primary">Lopez</span>
+          <span className="text-primary">López</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -94,7 +94,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-12 text-balance"
         >
-          Frontend Developer{" "}
+          Full Stack Developer{" "}
           <span className="text-foreground font-medium">
             creando experiencias digitales
           </span>

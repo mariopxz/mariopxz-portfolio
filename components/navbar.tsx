@@ -6,7 +6,7 @@ import { Menu, X, Sun, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
 
 const navLinks = [
-  { href: "#sobre-mi", label: "Sobre mi" },
+  { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#contacto", label: "Contacto" },
 ]

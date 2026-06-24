@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowUp } from "lucide-react"
 
-const marqueeText = "FRONTEND DEVELOPER * REACT * TYPESCRIPT * NEXTJS * TAILWINDCSS * "
+const marqueeText = "FULL STACK DEVELOPER * REACT * JAVASCRIPT * PHP * TAILWINDCSS *  NODEJS * GIT *"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -37,7 +37,7 @@ export function Footer() {
               M<span className="text-primary">.</span>
             </span>
             <span className="text-sm text-muted-foreground">
-              {currentYear} Mario Lopez. Todos los derechos reservados.
+              {currentYear} Mario López. Todos los derechos reservados.
             </span>
           </div>
 
@@ -58,8 +58,8 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <p className="text-center text-xs text-muted-foreground">
-            Disenado y desarrollado con{" "}
-            <span className="text-primary">pasion</span> por Mario Lopez
+            Diseñado y desarrollado con{" "}
+            <span className="text-primary">pasión</span> por Mario López.
           </p>
         </div>
       </div>

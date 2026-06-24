@@ -20,21 +20,21 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Mario Lopez | Creative Developer',
+  title: 'Mario López | Creative Developer',
   description: 'Frontend Developer creando experiencias web unicas y de alto rendimiento. Especializado en React, TypeScript y diseno de interfaces modernas.',
-  keywords: ['Frontend Developer', 'React', 'TypeScript', 'Creative Developer', 'Web Developer', 'Mario Lopez'],
-  authors: [{ name: 'Mario Lopez' }],
-  creator: 'Mario Lopez',
+  keywords: ['Frontend Developer', 'React', 'TypeScript', 'Creative Developer', 'Web Developer', 'Mario López'],
+  authors: [{ name: 'Mario López' }],
+  creator: 'Mario López',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    title: 'Mario Lopez | Creative Developer',
+    title: 'Mario López | Creative Developer',
     description: 'Frontend Developer creando experiencias web unicas y de alto rendimiento.',
-    siteName: 'Mario Lopez Portfolio',
+    siteName: 'Mario López Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mario Lopez | Creative Developer',
+    title: 'Mario López | Creative Developer',
     description: 'Frontend Developer creando experiencias web unicas y de alto rendimiento.',
   },
 }

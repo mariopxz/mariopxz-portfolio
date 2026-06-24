@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const skills = [
-  { name: "React", level: 90 },
-  { name: "TypeScript", level: 85 },
+  { name: "React", level: 80 },
+  { name: "JavaScript", level: 85 },
   { name: "TailwindCSS", level: 95 },
-  { name: "Next.js", level: 80 },
+  { name: "PHP", level: 85 },
   { name: "Node.js", level: 60 },
   { name: "Git", level: 85 },
-]
+];
 
 const stats = [
-  { value: "1+", label: "Anos de experiencia" },
-  { value: "10+", label: "Proyectos completados" },
-  { value: "100%", label: "Dedicacion" },
-]
+  { value: "2+", label: "Años de experiencia" },
+  { value: "3+", label: "Proyectos completados" },
+  { value: "100%", label: "Dedicación" },
+];
 
 export function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="sobre-mi" className="py-32 relative" ref={ref}>
@@ -33,11 +33,13 @@ export function About() {
           className="mb-16"
         >
           <span className="text-sm font-mono text-primary uppercase tracking-widest">
-            01 / Sobre mi
+            01 / Sobre mí
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 text-balance">
             Construyendo el futuro,{" "}
-            <span className="text-muted-foreground">una linea de codigo a la vez</span>
+            <span className="text-muted-foreground">
+              una línea de código a la vez
+            </span>
           </h2>
         </motion.div>
 
@@ -55,18 +57,18 @@ export function About() {
                 M
               </div>
               <div>
-                <h3 className="text-2xl font-bold">Mario Lopez</h3>
-                <p className="text-muted-foreground">Frontend Developer</p>
+                <h3 className="text-2xl font-bold">Mario López</h3>
+                <p className="text-muted-foreground">Full Stack Developer</p>
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed text-lg text-pretty">
-              Soy un desarrollador frontend apasionado por crear experiencias web 
-              excepcionales. Con mas de un año de experiencia, me especializo en 
-              React, TypeScript y tecnologias modernas. Actualmente aprendiendo 
-              backend para convertirme en un perfil Full Stack completo.
+              Soy un desarrollador full stack apasionado por crear experiencias
+              web excepcionales. Con más de dos años de experiencia, me
+              especializo en React, JavaScript y tecnologías modernas.
+              Actualmente aprendiendo Node.js para seguir formando mi carrera.
             </p>
             <p className="text-muted-foreground leading-relaxed text-lg mt-4 text-pretty">
-              Mi enfoque combina codigo limpio con diseno intuitivo para crear 
+              Mi enfoque combina código limpio con diseño intuitivo para crear
               productos que los usuarios realmente disfrutan usar.
             </p>
           </motion.div>
@@ -81,7 +83,9 @@ export function About() {
             <div className="h-full flex flex-col justify-between gap-8">
               {stats.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-4xl sm:text-5xl font-bold">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl font-bold">
+                    {stat.value}
+                  </div>
                   <div className="text-primary-foreground/80 text-sm mt-1">
                     {stat.label}
                   </div>
@@ -134,7 +138,7 @@ export function About() {
             className="p-8 rounded-3xl bg-muted/50 border border-border flex items-center"
           >
             <blockquote className="text-lg italic text-muted-foreground text-pretty">
-              &ldquo;El buen codigo es su propia mejor documentacion.&rdquo;
+              &ldquo;El buen código es su propia mejor documentación.&rdquo;
               <footer className="text-sm font-medium text-foreground mt-4 not-italic">
                 - Steve McConnell
               </footer>
@@ -143,5 +147,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

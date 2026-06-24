@@ -9,7 +9,7 @@ const projects = [
     id: "01",
     title: "Passy",
     description:
-      "Generador de contrasenas seguras con una interfaz limpia y moderna. Permite personalizar la longitud y complejidad de las contrasenas generadas.",
+      "Generador de contraseñas seguras con una interfaz limpia y moderna. Permite personalizar la longitud y complejidad de las contraseñas generadas.",
     tags: ["React", "TailwindCSS", "TypeScript"],
     github: "https://github.com/mariopxz/passy",
     demo: "https://passy-one.vercel.app/",
@@ -17,8 +17,8 @@ const projects = [
   },
   {
     id: "02",
-    title: "Proximamente",
-    description: "Nuevo proyecto en desarrollo. Mantente atento para mas actualizaciones.",
+    title: "Mochi",
+    description: "Nuevo proyecto en desarrollo. Mantente atento para más actualizaciones.",
     tags: [],
     github: null,
     demo: null,
@@ -26,8 +26,8 @@ const projects = [
   },
   {
     id: "03",
-    title: "Proximamente",
-    description: "Mas proyectos creativos en camino. La innovacion nunca para.",
+    title: "Próximamente",
+    description: "Más proyectos creativos en camino. La innovación nunca para.",
     tags: [],
     github: null,
     demo: null,
@@ -108,7 +108,7 @@ export function Projects() {
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:border-foreground hover:bg-foreground hover:text-background transition-all text-sm font-medium"
                               >
                                 <Github className="h-4 w-4" />
-                                Codigo
+                                Código
                               </a>
                             )}
                             {project.demo && (

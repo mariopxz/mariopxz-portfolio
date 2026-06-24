@@ -63,7 +63,7 @@ export function Contact() {
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 text-balance">
             Hagamos algo{" "}
             <span className="relative inline-block">
-              increible
+              increíble
               <motion.svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 200 12"
